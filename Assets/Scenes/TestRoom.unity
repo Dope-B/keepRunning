@@ -1,0 +1,554 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &767549691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6934027891355145817, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_Name
+      value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934027891355145819, guid: 5e485cdcc68f7934f88d38794ac8cffd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e485cdcc68f7934f88d38794ac8cffd, type: 3}
+--- !u!1 &1040284162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1040284164}
+  - component: {fileID: 1040284163}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1040284163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040284162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e9387acd896c947b5073fea9060fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceEffect: []
+  audioSourceBGM: {fileID: 0}
+  effectSound:
+  - name: cool
+    clip: {fileID: 8300000, guid: bab91dd5be2357c4b9850e148c12e00a, type: 3}
+  - name: good
+    clip: {fileID: 8300000, guid: 52dbca28e21e5be48b7b2c04711577ab, type: 3}
+  - name: ummm
+    clip: {fileID: 8300000, guid: 4cfcb8a3c4d973f4e8209fa4cae88d5a, type: 3}
+  - name: switch
+    clip: {fileID: 8300000, guid: 986e9259b47bd3c49a098ab441b1a1a8, type: 3}
+  BGMSound:
+  - name: "\uD3F0\uC11C\uD2B8"
+    artist: 10cm
+    clip: {fileID: 8300000, guid: 86a505d617d5a9541ae0be8004068351, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 8bed4fed1f8a8b340b500712150a8ef8, type: 3}
+    backgroundColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+    note: {fileID: 0}
+  - name: Recklessly
+    artist: Hot Chelle Rae
+    clip: {fileID: 8300000, guid: ed12daa6083336f4986d1a860159c9d9, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 79de7326b590b2e479685fff5de8212b, type: 3}
+    backgroundColor: {r: 0.6963332, g: 0.80398726, b: 0.9056604, a: 1}
+    note: {fileID: 0}
+  - name: The City
+    artist: Madeon
+    clip: {fileID: 8300000, guid: a675fab9a006df448b5062a94e6eef6f, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 3d23bea5c1dd7ea4dbce1334503c91d0, type: 3}
+    backgroundColor: {r: 0.60784316, g: 0.7372549, b: 0.6901961, a: 1}
+    note: {fileID: 0}
+  - name: Don't Stop Me Now
+    artist: Queen
+    clip: {fileID: 8300000, guid: 347f30578fd581d43bc67bfb3ba517ee, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: a697f4d50d927f049a3a344cf15ba26f, type: 3}
+    backgroundColor: {r: 0.5509968, g: 0.60573155, b: 0.7735849, a: 1}
+    note: {fileID: 0}
+  - name: "\uACE0\uBC31(feat.\uC815\uC778)"
+    artist: "\uB2E4\uC774\uB098\uBBF9\uB4C0\uC624"
+    clip: {fileID: 8300000, guid: dfc02a5b732ae8741bdc383e5df93f75, type: 3}
+    direction: 01000000010000000100000001000000020000000200000002000000010000000100000001000000fefffffffefffffffeffffffffffffffffffffff
+    timeGap:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 2
+    - 1.7
+    - 1.9
+    - 2.1
+    - 1.8
+    albumCover: {fileID: 21300000, guid: 76942bd4e152c9d469bfd9def93c651a, type: 3}
+    backgroundColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+    note: {fileID: 4900000, guid: 9964fdc631882af4bb91b4f15b544fab, type: 3}
+  - name: "\uC0DD\uAC01\uBCF4\uB2E4 \uAD1C\uCC2E\uC544"
+    artist: "\uB9C8\uB9C8\uBB34"
+    clip: {fileID: 8300000, guid: 360fd160f806b8645ab75a3f7110b9ec, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 443e2de66d1fc3041bc46d1985a2e4b4, type: 3}
+    backgroundColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    note: {fileID: 0}
+  - name: "\uAD81\uAE08\uD574 \uAC00\uB054(feat.\uAD6C\uC778\uD68C of MAC)"
+    artist: "\uBC30\uCE58\uAE30"
+    clip: {fileID: 8300000, guid: 56e75ad420e431640af8755764c20b5e, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: e03f22dba2def1d4297bc65cae0a2218, type: 3}
+    backgroundColor: {r: 0.47843137, g: 0.5176471, b: 0.5882353, a: 1}
+    note: {fileID: 0}
+  - name: Always Awake
+    artist: "\uBE48\uC9C0\uB178"
+    clip: {fileID: 8300000, guid: ef1c36ae64576ed439b3dbe5572c37ea, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 57fc1e1fcdfd7b44dbfd22cc4d726540, type: 3}
+    backgroundColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+    note: {fileID: 0}
+  - name: "\uB110 \uC9C0\uC6CC\uC57C\uD574"
+    artist: "\uCC3D\uBAA8"
+    clip: {fileID: 8300000, guid: 9a984315d4d2c7c4388abd3df923dd57, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: b77b938aea5766b41b85eab791d5abdc, type: 3}
+    backgroundColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+    note: {fileID: 0}
+  - name: "\uD589\uC6B4\uC744 \uBE4C\uC5B4\uC694"
+    artist: "\uD398\uD37C\uD1A4\uC2A4"
+    clip: {fileID: 8300000, guid: 22c7bd619706f90409fd0fc87e2a57cb, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 2ff687e0cb2df1647a43fcbbe5acd96c, type: 3}
+    backgroundColor: {r: 0.6862745, g: 0.8117647, b: 0.87058824, a: 1}
+    note: {fileID: 0}
+  - name: "\uBA40\uC5B4(feat.\uBE48\uC9C0\uB178)"
+    artist: "\uD504\uB77C\uC774\uBA38\uB9AC"
+    clip: {fileID: 8300000, guid: 43d042637504e0a4d83e5df79a4b38df, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: e61da1c640b58b44db445a5276a58ec8, type: 3}
+    backgroundColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+    note: {fileID: 0}
+  - name: Where Did The Party Go
+    artist: Fall Out Boy
+    clip: {fileID: 8300000, guid: a0c27ff1b2a13954693ab93c1e8d811b, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: e9fd8cc1f0e897f4082569d8261810bd, type: 3}
+    backgroundColor: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 1}
+    note: {fileID: 0}
+  - name: "\uC0AC\uB78C"
+    artist: "\uC9C0\uCF54"
+    clip: {fileID: 8300000, guid: e1fa31a37b9f143428c9818069742717, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 18c3cc2a56e31604b9c9959254c3b117, type: 3}
+    backgroundColor: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
+    note: {fileID: 0}
+  - name: "Get(feat.\uBE48\uC9C0\uB178)"
+    artist: "\uC5B4\uBC18\uC790\uCE74\uD30C"
+    clip: {fileID: 8300000, guid: d331e6a8fc2df4d4f9d8f0b01f335a1a, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: ef9eba0ed5250b941983e8d3f49f6d90, type: 3}
+    backgroundColor: {r: 0.56470275, g: 0.8490566, b: 0.8490566, a: 1}
+    note: {fileID: 0}
+  - name: "\uC7A0 \uBABB \uB4DC\uB294 \uBC24 \uBE44\uB294 \uB0B4\uB9AC\uACE0"
+    artist: "\uAE40\uAC74\uBAA8"
+    clip: {fileID: 8300000, guid: 03cba7b73c9b49147bef02a20a8452f3, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: 50cec1df690d55443b297219c84fda46, type: 3}
+    backgroundColor: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
+    note: {fileID: 0}
+  - name: And July(feat.Dean)
+    artist: "\uD5E4\uC774\uC988"
+    clip: {fileID: 8300000, guid: fc9569cfc43d23744a08b7eb832cab9f, type: 3}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 21300000, guid: e94bf08abaacca64f842ffea83b98372, type: 3}
+    backgroundColor: {r: 0.5686275, g: 0.4862745, b: 0.44705883, a: 1}
+    note: {fileID: 0}
+  currentBGM:
+    name: 
+    artist: 
+    clip: {fileID: 0}
+    direction: 
+    timeGap: []
+    albumCover: {fileID: 0}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    note: {fileID: 0}
+  theme: {fileID: 8300000, guid: c1da437b719d1e349a2fa2780a322218, type: 3}
+  playSoundName: []
+  maxvol: 1
+--- !u!4 &1040284164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040284162}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.079873, y: 0.28058994, z: -2.54918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1806116122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831942364073070273, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743825567317316634, guid: 08651541cc545fe4db73b7c1ecc53dd4,
+        type: 3}
+      propertyPath: m_Name
+      value: circle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08651541cc545fe4db73b7c1ecc53dd4, type: 3}
+--- !u!1 &1843711556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843711559}
+  - component: {fileID: 1843711558}
+  - component: {fileID: 1843711557}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1843711557
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843711556}
+  m_Enabled: 1
+--- !u!20 &1843711558
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843711556}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1843711559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843711556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
