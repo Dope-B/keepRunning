@@ -6,10 +6,6 @@
 
 #### 예시영상
 [![Video Label](http://img.youtube.com/vi/CN8t0P0eB0k/0.jpg)](https://youtu.be/CN8t0P0eB0k)
-<p>
-<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932201-2a52ad6f-8746-4b62-90bd-5e59f6ad5298.png"/>
-<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932205-f2a15f9b-e7e0-4ce0-b04b-d7c12143eebe.png"/>
-</p>
 
 #### 설명
 - 플레이 가능한 음악에 대한 정보는 BSound 클래스에 저장된다.
@@ -19,6 +15,11 @@
   - 앨범 커버
   - 배경색
   - 노트에 대한 정보
+<p>
+<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932201-2a52ad6f-8746-4b62-90bd-5e59f6ad5298.png"/>
+<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932205-f2a15f9b-e7e0-4ce0-b04b-d7c12143eebe.png"/>
+</p>
+
 - 게임 시작 시 AudioManager클래스에서 플레이 가능 노래들을 배열로 저장한다.
 
 ```C#
@@ -269,7 +270,7 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   - 싱크
   - 난이도
   - 비주얼라이저 막대 색깔
-<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932203-f651741b-30ed-4736-96c1-680554dfe8a3.png"/>
+<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932203-f651741b-30ed-4736-96c1-680554dfe8a3.png"/>
   
 - 노트를 만들 수 있는 매니지먼트 룸은 다음과 같은 기능을 가졌다.(미완성)
   -  노트 추가 버튼
@@ -280,7 +281,7 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   -  저장 버튼
   - 노래 일시정지 및 재생
   
-<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932207-fbd0d00f-0189-4547-818f-ff49a6b522a2.png"/>
+<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932207-fbd0d00f-0189-4547-818f-ff49a6b522a2.png"/>
   
 - 매니지먼트 룸에서 음악 실행 중 키보드 입력을 하면 노트가 생성된다.
 - 슬라이드 바에 나온 노트들은 드래그가 가능하다.
