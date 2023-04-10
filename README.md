@@ -132,6 +132,35 @@ void setFrequencyBands()// 512개 채널을 64개 채널로 압축
 - 리스트 전환 연출은 화면전환 연출과 동일하다.
 - 플레이 화면에서 스페이스바를 누른다면 게임이 시작된다.
 - 가운데 점은 키보드 상하좌우 입력이 가능하며 생성되는 블럭에 맞게 타이밍을 맞춰서 플레이한다.
+- 키보드 입력 시 레이캐스트를 사용해 가려는 방향에 블럭의 판정 콜라이더가 없다면 이동하지 않고 흔들린다.(ball_movement-> ball_shake(int direction))
+- 블럭는 판정 콜라이더가 있고 더 정확하게 맞추면 더 높은 점수를 받는다.
+```C#
+ray = Physics2D.Raycast(transform.position, Vector2.up, 0.9f, 1 << 8);
+//Debug.DrawRay(transform.position,Vector2.up*0.9f,Color.red,0.05f);
+if (ray&&currentIndex==ray.collider.gameObject.GetComponent<block>().index)
+{
+    box = ray.collider.gameObject.GetComponent<BoxCollider2D>();
+     if (Mathf.Abs(ray.point.x - (ray.collider.gameObject.transform.position.x + 0.5f)) <= 0.05f) { // 정확도 체크, perfect
+           ray.collider.gameObject.GetComponent<block>().effect_on(1);// 이펙트 출력
+           AudioManager.audioManager.playEffect("cool");// 효과음 출력
+           printCombo();// 콤보 텍스트 출력
+           printScoreText(500*combo);// 점수 업데이트
+           StartCoroutine(cameraMove.cam.camShake(0.2f, 0.3f));// 화면 흔들림 효과
+          }
+     else if(Mathf.Abs(ray.point.x - (ray.collider.gameObject.transform.position.x + 0.5f)) > 0.05f &&
+            Mathf.Abs(ray.point.x - (ray.collider.gameObject.transform.position.x + 0.5f)) <= 0.1f) {
+              // good
+             }
+      else { // bad
+            combo = 0;// 콤보 초기화
+            printScoreText(100);
+            AudioManager.audioManager.playEffect("ummm");
+            ray.collider.gameObject.GetComponent<block>().effect_on(5);
+            }
+       ray.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;// 점이 레이캐스트 중 위치한 점을 인식하면 안되기에 콜라이더 비활성화
+
+```
+
 - 블럭은 오브젝트 풀링을 사용하여 최적화를 했다.
 ```C#
 private void blockInit()// 최초로 큐에 할당
@@ -181,6 +210,48 @@ if (ball_movement.Ball.currentIndex == 0) { reachTime += 3f; }// 첫 블럭은 �
 .
 bs = (Mathf.Abs(randomPos) / reachTime); // 블럭의 속도는 블럭의 생성 위치(거리)/이동 시간(시간)
 ```
+- 블럭은 큐에 있는 갯수만 출력되며 게임 진행 중 기존 블럭은 페이드 아웃 연출로 큐에 반환된다. 
+- 블럭 가이드라인은 전방 4개의 블럭의 위치를 알려준다.(block_checker-> updateMapWay())
+```C#
+GameObject blockWay = getObject(1);// 오브젝트 풀링
+blockWay.GetComponent<blockWay>().blockWayStart();
+switch (direction[i])// 다음 블럭 방향에 따라 이전 블럭 위치에서 위치 조정
+{
+  case 1:
+          lastBlockWayPosY += 1;
+          break;
+   case 2:
+          lastBlockWayPosX -= 1;
+          break;
+   case -1:
+          lastBlockWayPosY -= 1;
+          break;
+   case -2:
+          lastBlockWayPosX += 1;
+          break;
+}
+blockWay.transform.position = new Vector2(lastBlockWayPosX, lastBlockWayPosY);// 가이드라인 위치 설정
+blockWay.GetComponent<blockWay>().index = i;// 인덱스 증가
+```
+
+- 플레이 시 백그라운드와 앨범커버의 투명도는 가변적으로 바뀐다.
+```C#
+float min = Random.Range(0, 0.15f);// 투명도 최소값
+float max = Random.Range(0.25f, 0.35f);/ 투명도 최대값
+while (this.GetComponent<Image>().color.a<=max)// 투명도 증가
+  {
+     this.GetComponent<Image>().color += new Color(0, 0, 0, 0.001f);
+     yield return new WaitForEndOfFrame();
+   }
+while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
+   {
+      this.GetComponent<Image>().color -= new Color(0, 0, 0, 0.001f);
+      yield return new WaitForEndOfFrame();
+   }
+   StartCoroutine(Alphatrans());
+
+```
+
 - 플레이 화면이 아닐 시 플레이 리스트들은 비활성화 된다.
 - 옵션 화면에서 선택 할 수 있는 옵션은 다음과 같다.
   - BGM 소리 크기
@@ -188,4 +259,18 @@ bs = (Mathf.Abs(randomPos) / reachTime); // 블럭의 속도는 블럭의 생성
   - 싱크
   - 난이도
   - 비주얼라이저 막대 색깔
-- 
+- 노트를 만들 수 있는 매니지먼트 룸은 다음과 같은 기능을 가졌다.(미완성)
+  -  노트 추가 버튼
+  -  노트 생성 시간, 방향 조정 텍스트 필드
+  -  노트 분포도를 나타내는 슬라이드 바
+  -  노트 삭제 버튼
+  -  노트 리셋 버튼
+  -  저장 버튼
+  - 노래 일시정지 및 재생
+- 매니지먼트 룸에서 음악 실행 중 키보드 입력을 하면 노트가 생성된다.
+- 슬라이드 바에 나온 노트들은 드래그가 가능하다.
+- 음악 재생 상태또한 드래그로 조절할 수 있으면 블럭 상태도 자동으로 조절된다.
+- 매니지먼트 모드에서의 블럭 움직임은 다음과 같은 함수로 이루어진다.
+  - setBlockForEditMode(): 매니지먼트 상태에서도 블럭의 갯수는 제한적이기 때문에 블럭의 갯수를 제한적으로 출력
+  - fillBlockForEditmode(): 실행 시 블럭의 생성 위치에 따라 점 위치 설정
+  - manageModePlay(): 매니지먼트 모드에서 음악 실행 시 실행
