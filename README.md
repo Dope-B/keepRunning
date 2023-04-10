@@ -274,3 +274,9 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   - setBlockForEditMode(): 매니지먼트 상태에서도 블럭의 갯수는 제한적이기 때문에 블럭의 갯수를 제한적으로 출력
   - fillBlockForEditmode(): 실행 시 블럭의 생성 위치에 따라 점 위치 설정
   - manageModePlay(): 매니지먼트 모드에서 음악 실행 시 실행
+  
+#### 피드백
+ - 씬 전환에 수직동기화가 안 되어 컴푸터 성능에 따라 속도가 차이남
+ - 씬 전환 함수가 비효율적
+ - 매니지먼트 기능에 버그가 있어 미완성
+ - 노래 추가가 어려움
