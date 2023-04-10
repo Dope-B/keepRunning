@@ -4,6 +4,13 @@
 
 #### 제작 기간: 2020.07.10~2020.09.20
 
+#### 예시영상
+[![Video Label](http://img.youtube.com/vi/CN8t0P0eB0k/0.jpg)](https://youtu.be/CN8t0P0eB0k)
+<p>
+<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932201-2a52ad6f-8746-4b62-90bd-5e59f6ad5298.png"/>
+<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932205-f2a15f9b-e7e0-4ce0-b04b-d7c12143eebe.png"/>
+</p>
+
 #### 설명
 - 플레이 가능한 음악에 대한 정보는 BSound 클래스에 저장된다.
   - 제목
@@ -17,8 +24,8 @@
 ```C#
 for (int i = 0; i < BGMSound.Length; i++) { if (BGMSound[i].note != null) BGMSound[i].getNote(); }
 ```
-
 - 노트 정보는 텍스트 파일에 저장되며 (노트방향1,노트간격1/노트방향2,노트간격2...) 처럼 저장된다.
+
 ```C#
     public void getNote()
     {
@@ -42,6 +49,9 @@ for (int i = 0; i < BGMSound.Length; i++) { if (BGMSound[i].note != null) BGMSou
 ```
 
 - 게임의 화면구성은 총 3개로 씬전환 없는 연출을 위해 각 화면은 120도 간격으로 원 형태로 배치돼있다.(타이틀 - 플레이 - 옵션)
+
+<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932194-7094192b-2aaf-4c40-ab25-015fe193a3e7.png"/>
+
 - 비주얼라이저는 기본적으로 일자형으로 백그라운드에 배치되면 플레이 시 원형 비주얼라이저로 바뀐다.
 ```C#
       if (sortNum == 0)// 원형
@@ -259,6 +269,8 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   - 싱크
   - 난이도
   - 비주얼라이저 막대 색깔
+<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932203-f651741b-30ed-4736-96c1-680554dfe8a3.png"/>
+  
 - 노트를 만들 수 있는 매니지먼트 룸은 다음과 같은 기능을 가졌다.(미완성)
   -  노트 추가 버튼
   -  노트 생성 시간, 방향 조정 텍스트 필드
@@ -267,6 +279,9 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   -  노트 리셋 버튼
   -  저장 버튼
   - 노래 일시정지 및 재생
+  
+<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932207-fbd0d00f-0189-4547-818f-ff49a6b522a2.png"/>
+  
 - 매니지먼트 룸에서 음악 실행 중 키보드 입력을 하면 노트가 생성된다.
 - 슬라이드 바에 나온 노트들은 드래그가 가능하다.
 - 음악 재생 상태또한 드래그로 조절할 수 있으면 블럭 상태도 자동으로 조절된다.
@@ -274,7 +289,9 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   - setBlockForEditMode(): 매니지먼트 상태에서도 블럭의 갯수는 제한적이기 때문에 블럭의 갯수를 제한적으로 출력
   - fillBlockForEditmode(): 실행 시 블럭의 생성 위치에 따라 점 위치 설정
   - manageModePlay(): 매니지먼트 모드에서 음악 실행 시 실행
-  
+
+
+
 #### 피드백
  - 씬 전환에 수직동기화가 안 되어 컴푸터 성능에 따라 속도가 차이남
  - 씬 전환 함수가 비효율적
