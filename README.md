@@ -16,8 +16,8 @@
   - 배경색
   - 노트에 대한 정보
 <p>
-<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932201-2a52ad6f-8746-4b62-90bd-5e59f6ad5298.png"/>
-<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932205-f2a15f9b-e7e0-4ce0-b04b-d7c12143eebe.png"/>
+<img width="50%" src="https://user-images.githubusercontent.com/33209821/230932201-2a52ad6f-8746-4b62-90bd-5e59f6ad5298.png"/>
+<img width="50%" src="https://user-images.githubusercontent.com/33209821/230932205-f2a15f9b-e7e0-4ce0-b04b-d7c12143eebe.png"/>
 </p>
 
 - 게임 시작 시 AudioManager클래스에서 플레이 가능 노래들을 배열로 저장한다.
@@ -51,7 +51,7 @@ for (int i = 0; i < BGMSound.Length; i++) { if (BGMSound[i].note != null) BGMSou
 
 - 게임의 화면구성은 총 3개로 씬전환 없는 연출을 위해 각 화면은 120도 간격으로 원 형태로 배치돼있다.(타이틀 - 플레이 - 옵션)
 
-<img width="30%" src="https://user-images.githubusercontent.com/33209821/230932194-7094192b-2aaf-4c40-ab25-015fe193a3e7.png"/>
+<img width="50%" src="https://user-images.githubusercontent.com/33209821/230932194-7094192b-2aaf-4c40-ab25-015fe193a3e7.png"/>
 
 - 비주얼라이저는 기본적으로 일자형으로 백그라운드에 배치되면 플레이 시 원형 비주얼라이저로 바뀐다.
 ```C#
@@ -270,7 +270,7 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   - 싱크
   - 난이도
   - 비주얼라이저 막대 색깔
-<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932203-f651741b-30ed-4736-96c1-680554dfe8a3.png"/>
+<img width="50%" src="https://user-images.githubusercontent.com/33209821/230932203-f651741b-30ed-4736-96c1-680554dfe8a3.png"/>
   
 - 노트를 만들 수 있는 매니지먼트 룸은 다음과 같은 기능을 가졌다.(미완성)
   -  노트 추가 버튼
@@ -281,7 +281,7 @@ while (this.GetComponent<Image>().color.a >= min)// 투명도 감소
   -  저장 버튼
   - 노래 일시정지 및 재생
   
-<img width="40%" src="https://user-images.githubusercontent.com/33209821/230932207-fbd0d00f-0189-4547-818f-ff49a6b522a2.png"/>
+<img width="50%" src="https://user-images.githubusercontent.com/33209821/230932207-fbd0d00f-0189-4547-818f-ff49a6b522a2.png"/>
   
 - 매니지먼트 룸에서 음악 실행 중 키보드 입력을 하면 노트가 생성된다.
 - 슬라이드 바에 나온 노트들은 드래그가 가능하다.
